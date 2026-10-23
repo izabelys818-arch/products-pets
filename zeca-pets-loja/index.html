@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zeca Pets — Banho é cuidado, é bem-estar!</title>
+  <meta name="description" content="Shampoo, condicionador, leave-in, perfumes e higiene para cães, gatos, coelhos e cavalos. Tudo o que seu pet precisa, em um só lugar!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">🚚 Frete grátis acima de R$ 150 · 💳 Até 3x sem juros · 🐾 10% OFF na primeira compra com <b>BEMVINDO10</b></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo"><span>ZECA</span><i>PETS</i></a>
+      <form class="search" id="searchForm" role="search">
+        <input id="search" type="search" placeholder="Buscar shampoo, perfume, leave-in..." aria-label="Buscar produtos">
+      </form>
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="pill">🐾 Linha de banho e cuidados</span>
+        <h1>Banho é cuidado, <em>é bem-estar!</em></h1>
+        <p>Para cães, gatos, coelhos e até cavalos. Tudo o que seu pet precisa, em um só lugar.</p>
+        <a href="#produtos" class="btn">Ver produtos</a>
+      </div>
+      <img class="hero-img" src="assets/catalogo.webp" alt="Catálogo Zeca Pets: cachorro, gato, coelho e cavalo no banho" width="651" height="889">
+    </div>
+  </section>
+
+  <section class="cats container" aria-label="Categorias">
+    <button data-cat="Shampoo"><span>🧴</span><b>Shampoo</b><small>Limpeza profunda e pelagem saudável</small></button>
+    <button data-cat="Condicionador"><span>🧴</span><b>Condicionador</b><small>Maciez, hidratação e desembaraço</small></button>
+    <button data-cat="Leave-in"><span>💧</span><b>Leave-in</b><small>Proteção, brilho e perfumação</small></button>
+    <button data-cat="Perfumes e colônias"><span>🌸</span><b>Perfumes e colônias</b><small>Cheirinho delicioso por mais tempo</small></button>
+    <button data-cat="Higiene e cuidados"><span>💜</span><b>Higiene e cuidados</b><small>Tudo para manter seu pet bem cuidado</small></button>
+  </section>
+
+  <main class="container" id="produtos">
+    <div class="toolbar">
+      <h2>Nossos produtos</h2>
+      <div class="filters">
+        <div class="chips" id="chips"></div>
+        <div class="selects">
+          <select id="pet" aria-label="Filtrar por pet">
+            <option value="">Todos os pets</option>
+            <option>Cães</option><option>Gatos</option><option>Coelhos</option><option>Cavalos</option>
+          </select>
+          <select id="sort" aria-label="Ordenar">
+            <option value="rel">Relevância</option>
+            <option value="asc">Menor preço</option>
+            <option value="desc">Maior preço</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Nenhum produto encontrado 😿</p>
+  </main>
+
+  <section class="newsletter">
+    <div class="container">
+      <h2>Ganhe 10% OFF na primeira compra</h2>
+      <form id="newsForm">
+        <input type="email" required placeholder="Seu melhor e-mail" aria-label="E-mail">
+        <button class="btn">Quero meu cupom</button>
+      </form>
+      <p id="newsMsg" hidden>Obrigado! Use o cupom <b>BEMVINDO10</b> no carrinho 🎉</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><b>ZECA PETS</b> · Tudo o que seu pet precisa, em um só lugar! · © <span id="year"></span></div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Carrinho" aria-hidden="true">
+    <div class="drawer-head"><h3>Seu carrinho</h3><button id="closeCart" aria-label="Fechar">✕</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="coupon"><input id="coupon" placeholder="Cupom de desconto"><button id="applyCoupon">Aplicar</button></div>
+      <div class="row"><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+      <div class="row"><span>Desconto</span><span id="discount">− R$ 0,00</span></div>
+      <div class="row"><span>Frete</span><span id="shipping">—</span></div>
+      <div class="row total"><span>Total</span><span id="total">R$ 0,00</span></div>
+      <input id="custName" placeholder="Seu nome">
+      <button class="btn block" id="checkout">Finalizar pelo WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
