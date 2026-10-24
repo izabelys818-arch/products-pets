@@ -30,7 +30,7 @@ Depois acesse http://localhost:8000.
 ## 🗂️ Estrutura
 
 ```
-zeca-pets-loja/
+./
 ├── index.html          # página principal
 ├── politicas.html      # entregas, trocas, pagamentos e privacidade
 ├── css/styles.css      # estilos organizados por seção
@@ -44,7 +44,8 @@ zeca-pets-loja/
 │   ├── cart.js         # sacola e favoritos
 │   ├── checkout.js     # finalização do pedido
 │   └── main.js         # inicialização e seções institucionais
-└── assets/img/         # imagens (catálogo, favicon)
+├── assets/img/         # imagens (catálogo, favicon)
+└── zeca-pets/          # versão antiga da página inicial (arquivo)
 ```
 
 ## ⚙️ Antes de publicar
